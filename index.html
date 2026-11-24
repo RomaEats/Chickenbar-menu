@@ -1066,7 +1066,7 @@ function itemLines(){
 function buildRestaurantMessage(code, dest){
   const delivery = isDelivery();
   let m = `Hi ${RESTAURANT_NAME}! New order 🧾\nCODE: ${code}\nType: ${delivery ? "DELIVERY 🛵" : "PICKUP 🏃"}\n\n${itemLines()}\n\n`;
-  m += `TOTAL: ${money(foodTotal())}\n`;
+  m += `TOTAL: ${money(grandTotal())}\n`;
   if(delivery) m += `\nDeliver to: ${dest}\n(Delivery fee is paid to the rider.)\n`;
   m += `\nPlease confirm my order. Thank you!`;
   return m;
